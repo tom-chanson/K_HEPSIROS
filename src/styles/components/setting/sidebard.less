@@ -1,0 +1,41 @@
+.sidebar{
+    &.littleScreen {
+        width: 0;
+        height: 0;
+    
+    
+    &:not(.collapsed){
+        position: fixed;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        
+        .sidebar-background{
+            display: block;
+            animation: backgroundFadeIn 0.5s;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+    }
+
+    .sidebar-background{
+        display: none;
+    }
+
+    .menuButtons{
+        padding: 0.1rem 0.5rem;
+    }
+
+    @keyframes backgroundFadeIn{
+        from{
+            display: block;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        to{
+            display: block;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}

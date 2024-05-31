@@ -1,0 +1,49 @@
+{
+  "productName": "K'HEPSIROS",
+  "version": "0.0.1",
+  "identifier": "dev.tomchanson.khepsiros",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "K'HEPSIROS",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": "style-src * 'unsafe-inline' http://tauri.localhost data: blob:; default-src * http://tauri.localhost data: blob:;ipc: * http://ipc.localhost;img-src * http://localhost blob:;asset: * http://asset.localhost blob:*",
+      "assetProtocol": {
+        "enable": true,
+        "scope": ["**", "*", "$DOWNLOAD", "$DESKTOP", "$HOME"]
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["deb", "appimage", "msi", "nsis", "updater"],
+    "icon": [
+      "icons/icon.png",
+      "icons/icon128.png",
+      "icons/icon256.png",
+      "icons/icon512.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "active": true,
+      "dialog": false,
+      "endpoints": [
+        "https://github.com/tom-chanson/K_HEPSIROS/releases/latest/latest.json"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDVEMTNBMTkzRDhDODBGQUEKUldTcUQ4allrNkVUWGFSeVlPT0tOQ3FpODNDT0l5ZFhNTkczMlJsQ01sZGVqMk83cEl3WURZK2IK"
+    }
+  }
+}

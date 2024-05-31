@@ -1,0 +1,21 @@
+.userNavbar{
+    display: flex;
+    flex-direction: row;
+
+    .userNavbarTabs{
+        flex: 1;
+    }
+
+    .leftNavbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding-right: 10px;
+
+        & > * {
+            margin-left: 10px;
+            height: 100%;
+        }
+    }
+}

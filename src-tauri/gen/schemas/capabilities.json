@@ -1,0 +1,1 @@
+{"main-capability":{"identifier":"main-capability","description":"Capability for the main window","local":true,"windows":["main"],"permissions":[{"identifier":"http:default","allow":[{"url":"https://edtmobiliteng.wigorservices.net/*"}],"deny":[]},{"identifier":"http:allow-fetch","allow":[{"url":"https://edtmobiliteng.wigorservices.net/*"}],"deny":[]}]}}

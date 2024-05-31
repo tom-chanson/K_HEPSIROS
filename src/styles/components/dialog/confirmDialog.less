@@ -1,0 +1,35 @@
+@import '../../variables.less';
+
+
+.confirmDialog{
+
+    .message{
+        span {
+        justify-content: center;
+        display: flex;
+        }
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    .button {
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 5px;
+        margin-inline: 10px;
+        color: white;
+        cursor: pointer;
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+    }
+    .confirm {
+        background-color: @confirm-button-background-color;
+    }
+
+    .cancel {
+        background-color: @cancel-button-background-color;
+    }
+}
+}

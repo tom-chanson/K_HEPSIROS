@@ -1,0 +1,97 @@
+@import 'variables.less';
+@import 'mixins.less';
+@import 'reset.less';
+
+// Styles globaux de l'application
+body {
+    font-family: @font-family;
+    font-size: @font-size;
+    line-height: @line-height;
+    margin: 0;
+    padding: 0;
+
+
+    //theme light et dark
+    &.dark {
+        background-color: @background-color-dark;
+        color: @text-color-dark;
+        //appliquer un thème de couleurs aux scrollbars
+        &::-webkit-scrollbar {
+            background-color: @scrollbar-color-dark;
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: @scrollbar-thumb-color-dark;
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: @scrollbar-color-hover-dark;
+        }
+        &::-webkit-scrollbar-thumb:active {
+            background-color: @scrollbar-color-active-dark;
+        }
+
+    }
+
+    &.light {
+        background-color: @background-color;
+        color: @text-color;
+    }
+
+    #root{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+}
+
+.hide {
+    display: none;
+}
+
+// input,
+// button {
+//   border-radius: 8px;
+//   border: 2px solid transparent;
+//   padding: 0.6em 1.2em;
+//   font-size: 1em;
+//   font-weight: 500;
+//   margin: 0.2em;
+//   font-family: inherit;
+//   color: @input-color;
+//   background-color: @input-background-color;
+//   transition: all 0.4s;
+//   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+//   color-scheme: dark;
+
+//   //si le bouton a aussi la classe "secondary"
+//     &.secondary {
+//         background-color: transparent;
+//         border-color: transparent;
+//         color: @text-color-secondary;
+//         box-shadow: none;
+//     }
+
+//   &:hover {
+//     background-color: darken(@input-background-color, 5%);
+//     color: @text-color-secondary;
+//   }
+
+//   &:active {
+//     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+//     background-color: darken(@input-background-color, 5%);
+//   }
+
+//   &:focus {
+//     outline: none;
+//   }
+// }
+
+// input:focus {
+//     color: @text-color;
+// }
+
+// .text-secondary-color{
+//     color: @text-color-secondary;
+// }
